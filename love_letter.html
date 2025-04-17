@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给特别的你</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffebee;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #e91e63;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .heart {
+            color: #e91e63;
+            font-size: 24px;
+            animation: beat 1s infinite alternate;
+        }
+        @keyframes beat {
+            to { transform: scale(1.1); }
+        }
+        button {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #c2185b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>亲爱的<span id="name">[名字]</span> <span class="heart">❤</span></h1>
+        <p>遇见你是我的幸运，每一天因为有你而变得特别。</p>
+        <p>我想告诉你，我真的很喜欢你！</p>
+        <p>你愿意成为我的特别的人吗？</p>
+        <button onclick="showResponse()">点击回应</button>
+        <p id="response" style="display:none;font-weight:bold;color:#e91e63;">
+            我也喜欢你！❤
+        </p>
+    </div>
+
+    <script>
+        function showResponse() {
+            document.getElementById('response').style.display = 'block';
+            document.querySelector('button').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
